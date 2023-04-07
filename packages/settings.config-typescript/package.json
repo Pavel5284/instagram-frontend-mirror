@@ -1,0 +1,26 @@
+{
+  "name": "settings.config-typescript",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "react-library.json",
+    "mui-theme.d.ts"
+  ],
+  "description": "These are base shared `tsconfig.json`s from which all other `tsconfig.json`'s inherit from.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.31",
+    "@types/react-dom": "18.0.11",
+    "react": "^18.2.0",
+    "typescript": "5.0.2"
+  }
+}

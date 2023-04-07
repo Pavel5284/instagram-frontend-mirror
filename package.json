@@ -1,0 +1,24 @@
+{
+  "name": "frontend-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build --no-daemon",
+    "dev": "turbo run dev --parallel --no-daemon",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format-check": "prettier --check \"**/*.{ts,tsx,md}\""
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "settings.config-eslint": "*",
+    "prettier": "^2.8.7",
+    "turbo": "^1.8.8"
+  }
+}

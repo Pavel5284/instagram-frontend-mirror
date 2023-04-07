@@ -1,0 +1,29 @@
+{
+  "display": "Next.js",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es6",
+    "lib": ["es6", "dom", "dom.iterable", "esnext", "es2016", "es2017"],
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "jsxImportSource": "@emotion/react"
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "*"],
+  "exclude": ["node_modules"]
+}
