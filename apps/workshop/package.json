@@ -25,25 +25,26 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "next": "13.2.4",
+    "packages.components.auth-form": "*",
+    "packages.components.header": "*",
+    "packages.components.modal": "*",
+    "packages.inputs.button": "*",
+    "packages.inputs.input": "*",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",
-    "yup": "^1.0.2",
-    "zustand": "^4.3.6",
     "theme.scheme": "*",
-    "packages.components.header": "*",
-    "packages.inputs.input": "*",
-    "packages.inputs.button": "*",
-    "packages.components.auth-form": "*",
-    "packages.components.modal": "*"
+    "yup": "^1.0.2",
+    "zustand": "^4.3.6"
   },
   "devDependencies": {
     "@types/node": "18.15.11",
     "@types/react": "18.0.31",
     "@types/react-dom": "18.0.11",
     "eslint": "^8.37.0",
-    "typescript": "5.0.2",
+    "prettier": "^2.8.7",
     "settings.config-eslint": "*",
-    "settings.config-typescript": "*"
+    "settings.config-typescript": "*",
+    "typescript": "5.0.2"
   }
 }
