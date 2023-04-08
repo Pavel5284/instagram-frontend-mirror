@@ -32,7 +32,6 @@ export const Input: FC<InputType> = ({
 
   return (
     <TextField
-      id="standard-basic"
       label={label}
       variant="standard"
       type={types}
