@@ -1,7 +1,7 @@
-import { Palette } from 'common/scheme/scheme';
-import { parentColor } from './Button';
+import { Palette } from 'theme.scheme';
+import { ParentColor } from './Button';
 
-export const colorStyle: any = (theme: Palette, parentColor: parentColor) => ({
+export const colorStyle: any = (theme: Palette, parentColor: ParentColor) => ({
   primary: {
     contained: {
       bgcolor: theme.primary['500'],

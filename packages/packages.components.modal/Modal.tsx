@@ -4,7 +4,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useTheme } from '@emotion/react';
 import { Scheme } from 'theme.scheme';
 
-type ModalType = {
+export type ModalType = {
   open: boolean;
   setOpen: (open: boolean) => void;
   header: string;

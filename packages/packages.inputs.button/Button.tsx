@@ -4,15 +4,15 @@ import { useTheme } from '@emotion/react';
 import { colorStyle, sizeStyle } from './style';
 import { Scheme } from 'theme.scheme';
 
-export type parentColor = '100' | '300' | '500' | '700' | '900';
+export type ParentColor = '100' | '300' | '500' | '700' | '900';
 
-type ButtonType = {
+export type ButtonType = {
   onClick: () => void;
   size?: 'fullwidth' | 'large' | 'medium' | 'small';
   variant?: 'contained' | 'outlined' | 'text';
   color?: 'primary' | 'light' | 'danger' | 'gradient';
   children: React.ReactNode;
-  parentColor?: parentColor; // степень dark, если исп varian 'outlined' and color  'gradient'
+  parentColor?: ParentColor; // степень dark, если исп varian 'outlined' and color  'gradient'
 } & Omit<ButtonProps, 'color' | 'size'>;
 
 export const Button: FC<ButtonType> = ({

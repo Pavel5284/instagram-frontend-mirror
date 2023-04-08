@@ -6,7 +6,7 @@ import { useTheme } from '@emotion/react';
 import { styleForInput } from './style';
 import { Scheme } from 'theme.scheme';
 
-type InputType = {
+export type InputType = {
   value: string;
   onChange: (value: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   label?: string;

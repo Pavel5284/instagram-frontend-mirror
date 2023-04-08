@@ -3,7 +3,7 @@ import { Stack } from '@mui/material';
 import { useTheme } from '@emotion/react';
 import { Scheme } from 'theme.scheme';
 
-type AuthFormType = {
+export type AuthFormType = {
   children: React.ReactNode;
   sx?: any;
 };
