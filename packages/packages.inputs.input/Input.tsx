@@ -8,7 +8,7 @@ import { Scheme } from 'theme.scheme';
 
 export type InputType = {
   value: string;
-  onChange: (value: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onChange: (value: React.ChangeEvent<HTMLInputElement>) => void;
   label?: string;
   type?: 'text' | 'password';
   error?: string | boolean;
