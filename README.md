@@ -12,5 +12,5 @@
 - [TypeScript](https://www.typescriptlang.org/ 'Strongly typed programming language that builds on JavaScript')
 - [MUI](https://mui.com/ 'Library of React UI components')
 - [TanStack Query (React Query)](https://tanstack.com/query/v3/ 'Asynchronous state management for TS/JS, React, Solid, Vue and Svelte')
-- [React Hook Form](https://tanstack.com/query/v3/ 'Flexible and extensible forms')
+- [React Hook Form](https://react-hook-form.com/ 'Flexible and extensible forms')
 - [Turborepo](https://turbo.build/repo/docs 'Turborepo is a high-performance build system for JavaScript and TypeScript codebases')
