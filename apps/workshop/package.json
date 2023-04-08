@@ -31,7 +31,11 @@
     "yup": "^1.0.2",
     "zustand": "^4.3.6",
     "theme.scheme": "*",
-    "packages.components.header": "*"
+    "packages.components.header": "*",
+    "packages.inputs.input": "*",
+    "packages.inputs.button": "*",
+    "packages.components.auth-form": "*",
+    "packages.components.modal": "*"
   },
   "devDependencies": {
     "@types/node": "18.15.11",
