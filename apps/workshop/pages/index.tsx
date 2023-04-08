@@ -1,4 +1,8 @@
 import Head from 'next/head';
+import { AuthForm } from 'packages.components.auth-form';
+import { Modal } from 'packages.components.modal';
+import { Button } from 'packages.inputs.button';
+import { Input } from 'packages.inputs.input';
 
 export default function Home() {
   return (
