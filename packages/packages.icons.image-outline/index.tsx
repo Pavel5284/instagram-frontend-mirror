@@ -1,0 +1,1 @@
+export { ImageOutlineIcon } from './ImageOutlineIcon';
