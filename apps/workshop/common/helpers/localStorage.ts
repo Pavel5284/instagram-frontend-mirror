@@ -8,3 +8,7 @@ export const getLocalStorage = (key: string) => {
 
   return null;
 };
+
+export const clearLocalStorage = (key: string) => {
+  localStorage.removeItem(key);
+};
