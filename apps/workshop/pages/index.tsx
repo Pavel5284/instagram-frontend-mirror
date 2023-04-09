@@ -1,6 +1,9 @@
 import Head from 'next/head';
+import { Input } from 'packages.inputs.input';
+import { useState } from 'react';
 
 export default function Home() {
+  const [value, setValue] = useState('');
   return (
     <div>
       <Head>
@@ -10,6 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <p>Powerful</p>
+      <Input value={value} onChange={(e) => setValue(e.target.value)} />
     </div>
   );
 }
