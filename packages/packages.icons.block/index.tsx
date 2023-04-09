@@ -1,0 +1,1 @@
+export { BlockIcon } from './BlockIcon';
