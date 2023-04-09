@@ -3,7 +3,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import type { AppProps } from 'next/app';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { getScheme } from 'theme.scheme';
-import { RegisterNewUserStorageKey } from 'common/variables';
 
 const queryClient = new QueryClient();
 
