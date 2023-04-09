@@ -1,5 +1,5 @@
 {
-  "name": "packages.inputs.input",
+  "name": "packages.icons.person-add",
   "version": "0.0.0",
   "main": "./index.tsx",
   "types": "./index.tsx",
@@ -10,11 +10,7 @@
     "react": "18.2.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@mui/material": "^5.11.15",
-    "settings.config-muidts": "*",
-    "theme.scheme": "*",
-    "packages.icons.eye-on": "*",
-    "packages.icons.eye-off": "*"
+    "@mui/material": "^5.11.15"
   },
   "devDependencies": {
     "@types/node": "18.15.11",

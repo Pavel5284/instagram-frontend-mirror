@@ -1,0 +1,1 @@
+export { PersoneRemoveIcon } from './PersoneRemoveIcon';
