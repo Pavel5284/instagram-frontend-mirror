@@ -10,6 +10,7 @@ const nextConfig = {
     'packages.components.modal',
     'packages.rhf.inputs.input',
     'packages.components.information-layout',
+    'packages.icons.log-out',
   ],
 };
 

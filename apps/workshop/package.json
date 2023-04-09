@@ -29,6 +29,7 @@
     "packages.components.header": "*",
     "packages.components.modal": "*",
     "packages.components.information-layout": "*",
+    "packages.icons.log-out": "*",
     "packages.inputs.button": "*",
     "packages.inputs.input": "*",
     "packages.rhf.inputs.input": "*",
