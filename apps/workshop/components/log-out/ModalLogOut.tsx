@@ -4,7 +4,7 @@ import { Modal } from 'packages.components.modal';
 import { Button } from 'packages.inputs.button';
 import { modalButtonContainerStyle } from './style';
 
-type ModalLogOutPropsType = {
+export type ModalLogOutPropsType = {
     open: boolean,
     setOpen: (open: boolean) => void,
     logOutClick: () => void,

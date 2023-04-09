@@ -5,7 +5,7 @@ import { Header } from 'packages.components.header';
 import { LogOut } from 'components/log-out/LogOut';
 import { innerStyle, pageStyle } from './style';
 
-type LayoutPropsType = {
+export type LayoutPropsType = {
   children: ReactNode;
   withSideMenu?: boolean;
   isCreateProfilePage?: boolean;
