@@ -10,7 +10,7 @@ export default function RegistrationConfirmation() {
   const { push } = useRouter();
 
   const handleLoginButton = () => {
-    push(Auth.Login);
+    push(Auth.SignIn);
   };
 
   return (

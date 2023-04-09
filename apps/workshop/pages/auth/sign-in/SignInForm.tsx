@@ -4,15 +4,14 @@ import * as yup from 'yup';
 import { Link, Stack, Typography } from '@mui/material';
 import Image from 'next/image';
 import React, { useState } from 'react';
-// import { AuthForm } from '../../../components/auth-form';
 import { AuthForm } from 'packages.components.auth-form';
-// import { ControlledInput } from '../../../components/controlled-input';
-// import { Button } from '../../../components/button';
-// import { Layout } from '../../../components/layout';
+import { Button } from 'packages.inputs.button';
+import { InputWithHookForm } from 'packages.rhf.inputs.input';
 import googleImg from '../../../common/assets/images/registration/registration-icons/google-svgrepo-com.svg';
 import facebookImg from '../../../common/assets/images/registration/registration-icons/facebook-svgrepo-com.svg';
 import { Auth } from '../../../common/path';
 import { useLoginMutation } from '../../../services/auth/sign-in/hooks';
+import { Layout } from '../../../components/layout';
 
 const schema = yup.object().shape({
   email: yup.string().email('Invalid email adress').required('Required'),
@@ -50,11 +49,26 @@ export default function SignInForm() {
             Sign in
           </Typography>
           <div style={{ width: '100%', display: 'flex', justifyContent: 'space-evenly' }}>
-            <Image width={36} height={36} alt="google-register" src={googleImg} />
-            <Image width={36} height={36} alt="facebook-register" src={facebookImg} />
+            <a href="https://www.google.com/" target="_blank" rel="noreferrer">
+              <Image width={36} height={36} alt="google-register" src={googleImg} />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+              <Image width={36} height={36} alt="facebook-register" src={facebookImg} />
+            </a>
           </div>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <ControlledInput
+          <form
+            style={{
+              display: 'flex',
+              position: 'relative',
+              flexDirection: 'column',
+              width: '100%',
+              justifyContent: 'center',
+              padding: '10px',
+              alignItems: 'center',
+            }}
+            onSubmit={handleSubmit(onSubmit)}
+          >
+            <InputWithHookForm
               clearErrors={() => {
                 setErrors('');
                 clearErrors();
@@ -63,7 +77,8 @@ export default function SignInForm() {
               name="email"
               label="Email"
               type="text"
-              error={loginErrors.email?.message}
+              isError={!!loginErrors.email?.message}
+              helperText={loginErrors.email?.message}
             />
             {/*  {loginErrors.email?.message && (
               <Typography sx={errorStyle} variant="regular_text_14">
@@ -72,7 +87,7 @@ export default function SignInForm() {
             )} */}
             {/*  <input {...register('email')} placeholder="email" type="email" required />
           <p>{errors.email?.message}</p> */}
-            <ControlledInput
+            <InputWithHookForm
               clearErrors={() => {
                 setErrors('');
                 clearErrors();
@@ -81,16 +96,15 @@ export default function SignInForm() {
               name="password"
               label="Password"
               type="password"
-              error={loginErrors.email?.message}
+              isError={!!loginErrors.password?.message}
+              helperText={loginErrors.password?.message}
             />
-            <div>{error && 'Invalid email or password'}</div>
-
             {/*   {loginErrors.password?.message && (
                 <Typography sx={errorStyle} variant="regular_text_14">
                   {loginErrors.password.message}
                 </Typography>
               )} */}
-            {errors && (
+            {error && (
               <Typography
                 sx={{
                   color: 'danger.500',
@@ -101,7 +115,7 @@ export default function SignInForm() {
                 }}
                 variant="regular_text_14"
               >
-                {errors}
+                Invalid email or password
               </Typography>
             )}
             {/*  <input {...register('password')} placeholder="password" type="password" required />

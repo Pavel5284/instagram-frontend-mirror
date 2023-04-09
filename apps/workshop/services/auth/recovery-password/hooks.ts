@@ -49,7 +49,7 @@ export const useSetNewPasswordPasswordMutation = (onErrorHandler: (error: string
 
     onSuccess: () => {
       clearLocalStorage(RecoveryPasswordStorageKey);
-      push(Auth.Login);
+      push(Auth.SignIn);
     },
 
     onError: (error: AuthErrorResponse) => {

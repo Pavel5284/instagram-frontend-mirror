@@ -96,7 +96,7 @@ const RecoveryPassword = () => {
           </Button>
         </form>
 
-        <Link href={Auth.Login} sx={linkStyle}>
+        <Link href={Auth.SignIn} sx={linkStyle}>
           <Typography variant="regular_text_16">Back to Sign In</Typography>
         </Link>
       </AuthForm>
