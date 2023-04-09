@@ -56,7 +56,11 @@ export default function RegistrationForm() {
     setIsModalOpen(false);
   };
 
-  console.log('he');
+  const handleClearErrors = () => {
+    setErrors('');
+    clearErrors();
+  };
+
   return (
     <Layout>
       <Stack sx={{ display: isModalOpen ? 'none' : 'block' }}>
@@ -94,10 +98,7 @@ export default function RegistrationForm() {
             }}
           >
             <InputWithHookForm
-              clearErrors={() => {
-                setErrors('');
-                clearErrors();
-              }}
+              clearErrors={handleClearErrors}
               control={control}
               name="email"
               label="Email"
@@ -106,10 +107,7 @@ export default function RegistrationForm() {
             />
 
             <InputWithHookForm
-              clearErrors={() => {
-                setErrors('');
-                clearErrors();
-              }}
+              clearErrors={handleClearErrors}
               control={control}
               name="password"
               label="Password"
@@ -119,10 +117,7 @@ export default function RegistrationForm() {
             />
 
             <InputWithHookForm
-              clearErrors={() => {
-                setErrors('');
-                clearErrors();
-              }}
+              clearErrors={handleClearErrors}
               control={control}
               name="confirmPassword"
               label="Password confirmation"
