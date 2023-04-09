@@ -5,6 +5,7 @@
   --gray: #333333;
   --lightGray: #4c4c4c;
   --font: 'Inter', sans-serif;
+::-webkit-input-placeholder
 }
 
 * {

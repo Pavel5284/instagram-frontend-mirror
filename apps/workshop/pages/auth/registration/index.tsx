@@ -157,7 +157,7 @@ export default function RegistrationForm() {
             sx={{ textDecoration: 'none', m: '20px 0' }}
             variant="h3"
             color="primary.500"
-            href={Auth.Login}
+            href={Auth.SignIn}
           >
             Sign In
           </Link>
