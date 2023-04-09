@@ -1,22 +1,4 @@
 import Head from 'next/head';
-import { AuthForm } from 'packages.components.auth-form';
-import { Modal } from 'packages.components.modal';
-import { EyeOffIcon } from 'packages.icons.eye-off';
-import { EyeOnIcon } from 'packages.icons.eye-on';
-import { MessageCircleIcon } from 'packages.icons.message-circle';
-import { MoreHorizontalIcon } from 'packages.icons.more-horizontal';
-import { PersoneAddIcon } from 'packages.icons.person-add';
-import { PersoneRemoveIcon } from 'packages.icons.person-remove';
-import { SendIcon } from 'packages.icons.send';
-import { Button } from 'packages.inputs.button';
-import { Input } from 'packages.inputs.input';
-import { CopyIcon } from 'packages.icons.copy';
-import { PinIcon } from 'packages.icons.pin';
-import { HeartIcon } from 'packages.icons.heart';
-import { EmailIcon } from 'packages.icons.email';
-import { TrashIcon } from 'packages.icons.trash';
-import { MaximizeIcon } from 'packages.icons.maximize';
-import { EditIcon } from 'packages.icons.edit';
 
 export default function Home() {
   return (
@@ -27,21 +9,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <EyeOffIcon sx={{ fill: 'pink' }} />
-      <EyeOnIcon sx={{ fill: 'pink' }} />
-      <SendIcon sx={{ fill: 'pink' }} />
-      <MoreHorizontalIcon sx={{ fill: 'pink' }} />
-      <MessageCircleIcon sx={{ fill: 'pink' }} />
-      <PersoneRemoveIcon sx={{ fill: 'pink' }} />
-      <PersoneAddIcon sx={{ fill: 'pink' }} />
-      <CopyIcon sx={{ fill: 'pink' }} />
-      <PinIcon sx={{ fill: 'pink' }} />
-      <HeartIcon sx={{ fill: 'pink' }} />
-      <EmailIcon sx={{ fill: 'pink' }} />
-      <TrashIcon sx={{ fill: 'pink' }} />
-      <MaximizeIcon sx={{ fill: 'pink' }} />
-      <EditIcon sx={{ fill: 'pink' }} />
+      <p>Powerful</p>
     </div>
   );
 }
