@@ -1,0 +1,1 @@
+export { ArrowIosDownIcon } from './ArrowIosDownIcon';

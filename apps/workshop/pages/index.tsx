@@ -1,9 +1,45 @@
 import Head from 'next/head';
-import { Input } from 'packages.inputs.input';
-import { useState } from 'react';
+import { HomeIcon } from 'packages.icons.home';
+import { HomeOutlineIcon } from 'packages.icons.home-outline';
+import { PlusSquareOutlineIcon } from 'packages.icons.plus-square-outline';
+import { PlusSquareIcon } from 'packages.icons.plus-square';
+import { PersonOutlineIcon } from 'packages.icons.person-outline';
+import { PersonIcon } from 'packages.icons.person';
+import { TrendingUpIcon } from 'packages.icons.trending-up';
+import { BookmarkOutlineIcon } from 'packages.icons.bookmark-outline';
+import { BookmarkIcon } from 'packages.icons.bookmark';
+import { ArrowIosBackIcon } from 'packages.icons.arrow-ios-back';
+import { ArrowIosDownIcon } from 'packages.icons.arrow-ios-down';
+import { ArrowIosForwardIcon } from 'packages.icons.arrow-ios-forward';
+import { ArrowIosUpIcon } from 'packages.icons.arrow-ios-up';
+import { BlockIcon } from 'packages.icons.block';
+import { CalendarIcon } from 'packages.icons.calendar';
+import { CalendarOutlineIcon } from 'packages.icons.calendar-outline';
+import { CloseIcon } from 'packages.icons.close';
+import { ExpandIcon } from 'packages.icons.expand';
+import { ImageIcon } from 'packages.icons.image';
+import { ImageOutlineIcon } from 'packages.icons.image-outline';
+import { PlusCircleOutlineIcon } from 'packages.icons.plus-circle-outline';
+import { PlusCircleIcon } from 'packages.icons.plus-circle';
+import { SearchIcon } from 'packages.icons.search';
+
+import { EyeOffIcon } from 'packages.icons.eye-off-outline';
+import { EyeOnIcon } from 'packages.icons.eye-on-outline';
+import { MessageCircleIcon } from 'packages.icons.message-circle-outline';
+import { MoreHorizontalIcon } from 'packages.icons.more-horizontal-outline';
+import { PersoneAddIcon } from 'packages.icons.person-add-outline';
+import { PersoneRemoveIcon } from 'packages.icons.person-remove-outline';
+import { SendIcon } from 'packages.icons.send-outline';
+
+import { CopyIcon } from 'packages.icons.copy-outline';
+import { PinIcon } from 'packages.icons.pin-outline';
+import { HeartIcon } from 'packages.icons.heart-outline';
+import { EmailIcon } from 'packages.icons.email-outline';
+import { TrashIcon } from 'packages.icons.trash-outline';
+import { MaximizeIcon } from 'packages.icons.maximize-outline';
+import { EditIcon } from 'packages.icons.edit-outline';
 
 export default function Home() {
-  const [value, setValue] = useState('');
   return (
     <div>
       <Head>
@@ -12,8 +48,45 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <p>Powerful</p>
-      <Input value={value} onChange={(e) => setValue(e.target.value)} />
+
+      <HomeOutlineIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <HomeIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <PlusSquareOutlineIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <PlusSquareIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <PersonOutlineIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <PersonIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <TrendingUpIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <BookmarkOutlineIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <BookmarkIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <ArrowIosBackIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <ArrowIosDownIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <ArrowIosForwardIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <ArrowIosUpIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <BlockIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <CalendarIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <CalendarOutlineIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <CloseIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <ExpandIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <ImageIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <ImageOutlineIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <PlusCircleIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <PlusCircleOutlineIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+      <SearchIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
+
+      <EyeOffIcon sx={{ fill: 'pink' }} />
+      <EyeOnIcon sx={{ fill: 'pink' }} />
+      <SendIcon sx={{ fill: 'pink' }} />
+      <MoreHorizontalIcon sx={{ fill: 'pink' }} />
+      <MessageCircleIcon sx={{ fill: 'pink' }} />
+      <PersoneRemoveIcon sx={{ fill: 'pink' }} />
+      <PersoneAddIcon sx={{ fill: 'pink' }} />
+      <CopyIcon sx={{ fill: 'pink' }} />
+      <PinIcon sx={{ fill: 'pink' }} />
+      <HeartIcon sx={{ fill: 'pink' }} />
+      <EmailIcon sx={{ fill: 'pink' }} />
+      <TrashIcon sx={{ fill: 'pink' }} />
+      <MaximizeIcon sx={{ fill: 'pink' }} />
+      <EditIcon sx={{ fill: 'pink' }} />
     </div>
   );
 }
