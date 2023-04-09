@@ -69,7 +69,7 @@
     "@types/react-dom": "18.0.11",
     "eslint": "^8.37.0",
     "prettier": "^2.8.7",
-    "settings.config-eslint": "*",
+    "eslint-config-custom": "*",
     "settings.config-typescript": "*",
     "typescript": "5.0.2"
   }
