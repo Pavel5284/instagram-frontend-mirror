@@ -1,0 +1,1 @@
+export { CalendarOutlineIcon } from './CalendarOutlineIcon';

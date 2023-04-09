@@ -1,0 +1,24 @@
+{
+  "name": "packages.icons.close",
+  "version": "0.0.0",
+  "main": "./index.tsx",
+  "types": "./index.tsx",
+  "scripts": {
+    "lint": "eslint \"**/*.ts*\""
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.15"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.31",
+    "@types/react-dom": "18.0.11",
+    "eslint": "^8.37.0",
+    "typescript": "5.0.2",
+    "eslint-config-custom": "*",
+    "settings.config-typescript": "*"
+  }
+}
