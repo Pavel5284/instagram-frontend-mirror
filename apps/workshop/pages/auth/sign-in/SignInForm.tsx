@@ -20,7 +20,7 @@ const schema = yup.object().shape({
 type FormData = yup.InferType<typeof schema>;
 
 export default function SignInForm() {
-  const [errors, setErrors] = useState('');
+  // const [errors, setErrors] = useState('');
 
   const { mutate: login, error } = useLoginMutation();
   const {
@@ -72,7 +72,6 @@ export default function SignInForm() {
           >
             <InputWithHookForm
               clearErrors={() => {
-                setErrors('');
                 clearErrors();
               }}
               control={control}
@@ -91,7 +90,6 @@ export default function SignInForm() {
           <p>{errors.email?.message}</p> */}
             <InputWithHookForm
               clearErrors={() => {
-                setErrors('');
                 clearErrors();
               }}
               control={control}
@@ -133,7 +131,7 @@ export default function SignInForm() {
             </Button>
             {/* <button type="submit"> Sign In </button> */}
           </form>
-          <Typography variant="regular_text_16">Don't have an account?</Typography>
+          <Typography variant="regular_text_16">Don`&apos`t have an account?</Typography>
           <Link
             sx={{ textDecoration: 'none', m: '20px 0' }}
             variant="h3"

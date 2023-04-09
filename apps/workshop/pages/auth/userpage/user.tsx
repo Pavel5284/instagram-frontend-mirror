@@ -1,1 +1,4 @@
-export const User = () => <div>user page</div>;
+import React from 'react';
+
+const User = () => <div>user page</div>;
+export default User;
