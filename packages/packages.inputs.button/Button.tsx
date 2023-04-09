@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { ButtonProps, Button as MuiButton } from '@mui/material';
 import { useTheme } from '@emotion/react';
-import { colorStyle, sizeStyle } from './style';
 import { Scheme } from 'theme.scheme';
+import { colorStyle, sizeStyle } from './style';
 
 export type ParentColor = '100' | '300' | '500' | '700' | '900';
 
@@ -33,6 +33,7 @@ export const Button: FC<ButtonType> = ({
         gap: '10px',
         textTransform: 'none',
         width: sizeStyle[size],
+
         ...colorStyle(palette, parentColor)[color][variant],
         ...sx,
       }}

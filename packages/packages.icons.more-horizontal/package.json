@@ -1,5 +1,5 @@
 {
-  "name": "packages.inputs.input",
+  "name": "packages.icons.more-horizontal",
   "version": "0.0.0",
   "main": "./index.tsx",
   "types": "./index.tsx",
@@ -10,11 +10,7 @@
     "react": "18.2.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@mui/material": "^5.11.15",
-    "settings.config-muidts": "*",
-    "theme.scheme": "*",
-    "packages.icons.eye-on": "*",
-    "packages.icons.eye-off": "*"
+    "@mui/material": "^5.11.15"
   },
   "devDependencies": {
     "@types/node": "18.15.11",
@@ -22,7 +18,7 @@
     "@types/react-dom": "18.0.11",
     "eslint": "^8.37.0",
     "typescript": "5.0.2",
-    "eslint-config-custom": "*",
+    "settings.config-eslint": "*",
     "settings.config-typescript": "*"
   }
 }
