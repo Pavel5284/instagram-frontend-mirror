@@ -8,6 +8,9 @@ const nextConfig = {
     'packages.inputs.button',
     'packages.components.auth-form',
     'packages.components.modal',
+    'packages.rhf.inputs.input',
+    'packages.components.information-layout',
+    'packages.icons.log-out',
   ],
 };
 
