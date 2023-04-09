@@ -1,10 +1,10 @@
 import React, { FC, useState } from 'react';
 import { IconButton, InputAdornment, TextField, TextFieldProps } from '@mui/material';
-import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useTheme } from '@emotion/react';
-import { styleForInput } from './style';
 import { Scheme } from 'theme.scheme';
+import { EyeOnIcon } from 'packages.icons.eye-on';
+import { EyeOffIcon } from 'packages.icons.eye-off';
+import { styleForInput } from './style';
 
 export type InputType = {
   value: string;
@@ -47,15 +47,15 @@ export const Input: FC<InputType> = ({
             {type === 'password' && (
               <IconButton onClick={() => setShow(!show)}>
                 {show ? (
-                  <VisibilityOffIcon sx={{ fill: palette.light['900'] }} />
+                  <EyeOnIcon sx={{ fill: palette.light['900'] }} />
                 ) : (
-                  <RemoveRedEyeIcon sx={{ fill: palette.light['900'] }} />
+                  <EyeOffIcon sx={{ fill: palette.light['900'] }} />
                 )}
               </IconButton>
             )}
           </InputAdornment>
         ),
-        style: { color: palette.light['900'], fontFamily: 'Inter' },
+
         ...InputProps,
       }}
       error={!!error}
