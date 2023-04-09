@@ -1,0 +1,1 @@
+export { HomeOutlineIcon } from './HomeOutlineIcon';
