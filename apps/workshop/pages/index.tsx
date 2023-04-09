@@ -23,21 +23,21 @@ import { PlusCircleOutlineIcon } from 'packages.icons.plus-circle-outline';
 import { PlusCircleIcon } from 'packages.icons.plus-circle';
 import { SearchIcon } from 'packages.icons.search';
 
-import { EyeOffIcon } from 'packages.icons.eye-off-outline';
-import { EyeOnIcon } from 'packages.icons.eye-on-outline';
-import { MessageCircleIcon } from 'packages.icons.message-circle-outline';
-import { MoreHorizontalIcon } from 'packages.icons.more-horizontal-outline';
-import { PersoneAddIcon } from 'packages.icons.person-add-outline';
-import { PersoneRemoveIcon } from 'packages.icons.person-remove-outline';
-import { SendIcon } from 'packages.icons.send-outline';
+import { EyeOffIcon } from 'packages.icons.eye-off';
+import { EyeOnIcon } from 'packages.icons.eye-on';
+import { MessageCircleIcon } from 'packages.icons.message-circle';
+import { MoreHorizontalIcon } from 'packages.icons.more-horizontal';
+import { PersoneAddIcon } from 'packages.icons.person-add';
+import { PersoneRemoveIcon } from 'packages.icons.person-remove';
+import { SendIcon } from 'packages.icons.send';
 
-import { CopyIcon } from 'packages.icons.copy-outline';
-import { PinIcon } from 'packages.icons.pin-outline';
-import { HeartIcon } from 'packages.icons.heart-outline';
-import { EmailIcon } from 'packages.icons.email-outline';
-import { TrashIcon } from 'packages.icons.trash-outline';
-import { MaximizeIcon } from 'packages.icons.maximize-outline';
-import { EditIcon } from 'packages.icons.edit-outline';
+import { CopyIcon } from 'packages.icons.copy';
+import { PinIcon } from 'packages.icons.pin';
+import { HeartIcon } from 'packages.icons.heart';
+import { EmailIcon } from 'packages.icons.email';
+import { TrashIcon } from 'packages.icons.trash';
+import { MaximizeIcon } from 'packages.icons.maximize';
+import { EditIcon } from 'packages.icons.edit';
 
 export default function Home() {
   return (
