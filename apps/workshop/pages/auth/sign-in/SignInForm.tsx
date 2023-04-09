@@ -21,6 +21,7 @@ type FormData = yup.InferType<typeof schema>;
 
 export default function SignInForm() {
   const [errors, setErrors] = useState('');
+
   const { mutate: login, error } = useLoginMutation();
   const {
     control,
@@ -29,6 +30,7 @@ export default function SignInForm() {
     formState: { errors: loginErrors },
   } = useForm<FormData>({
     defaultValues: { email: '', password: '' },
+    reValidateMode: 'onSubmit',
     resolver: yupResolver(schema),
   });
   const onSubmit = (data: FormData) => {

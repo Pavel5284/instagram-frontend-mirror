@@ -12,8 +12,8 @@ export const AuthRedirect: FC<PropsWithChildren> = ({ children }) => {
       /* <CustomCircularProgress /> */
     );
   }
-  if (isError && pathname !== '/sign-in') {
-    push('/sign-in');
+  if (isError && pathname !== '/auth/sign-in') {
+    push('/auth/sign-in');
   }
   return <div>{children}</div>;
 };

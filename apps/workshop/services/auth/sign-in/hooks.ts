@@ -1,8 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { SignInApi } from './signInApi';
-import { instance } from '../../../../../../instagram-frontend/services/instance/instance';
-import { noRefetch } from '../../../../../../instagram-frontend/helpers';
 import { Dispatch, SetStateAction } from 'react';
+import { SignInApi } from './signInApi';
+import { noRefetch } from '../../../../../../instagram-frontend/helpers';
 
 const handleSignInErrors = (error: any) => {
   const errors = error.response.status === 401;
@@ -23,8 +22,8 @@ export const useLoginMutation = (setError?: Dispatch<SetStateAction<string>> | n
     onSuccess: (res) => {
       console.log(res);
       const token = res.data.accessToken;
-      localStorage.setItem('jwt', token);
-      instance.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+      localStorage.setItem('accessToken', token);
+      // instance.defaults.headers.common.Authorization = `Bearer ${token}`;
       client.invalidateQueries(['me']);
     },
   });
@@ -32,11 +31,10 @@ export const useLoginMutation = (setError?: Dispatch<SetStateAction<string>> | n
   return mutation;
 };
 
-export const useMeQuery = () => {
-  return useQuery({
+export const useMeQuery = () =>
+  useQuery({
     queryFn: SignInApi.me,
     queryKey: ['me'],
     retry: false,
     ...noRefetch,
   });
-};
