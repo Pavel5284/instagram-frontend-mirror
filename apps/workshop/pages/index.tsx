@@ -23,6 +23,7 @@ import { PlusCircleOutlineIcon } from 'packages.icons.plus-circle-outline';
 import { PlusCircleIcon } from 'packages.icons.plus-circle';
 import { SearchIcon } from 'packages.icons.search';
 
+
 import { EyeOffIcon } from 'packages.icons.eye-off';
 import { EyeOnIcon } from 'packages.icons.eye-on';
 import { MessageCircleIcon } from 'packages.icons.message-circle';
@@ -38,6 +39,7 @@ import { EmailIcon } from 'packages.icons.email';
 import { TrashIcon } from 'packages.icons.trash';
 import { MaximizeIcon } from 'packages.icons.maximize';
 import { EditIcon } from 'packages.icons.edit';
+
 
 export default function Home() {
   return (
@@ -87,6 +89,7 @@ export default function Home() {
       <TrashIcon sx={{ fill: 'pink' }} />
       <MaximizeIcon sx={{ fill: 'pink' }} />
       <EditIcon sx={{ fill: 'pink' }} />
+
     </div>
   );
 }
