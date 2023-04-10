@@ -1,7 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { Dispatch, SetStateAction } from 'react';
 import { SignInApi } from './signInApi';
-import { noRefetch } from '../../../../../../instagram-frontend/helpers';
+import { noRefetch } from '../../../common/helpers';
 
 const handleSignInErrors = (error: any) => {
   const errors = error.response.status === 401;
@@ -9,6 +9,7 @@ const handleSignInErrors = (error: any) => {
   if (errors) {
     return 'Incorrect password or email';
   }
+  return '';
 };
 
 export const useLoginMutation = (setError?: Dispatch<SetStateAction<string>> | null) => {
