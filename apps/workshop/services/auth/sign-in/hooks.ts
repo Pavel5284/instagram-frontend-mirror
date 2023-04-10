@@ -20,7 +20,7 @@ export const useLoginMutation = (setError?: Dispatch<SetStateAction<string>> | n
       console.log(error);
       if (setError) handleSignInErrors(error);
     },
-    onSuccess: (res) => {
+    onSuccess: (res: any) => {
       console.log(res);
       const token = res.data.accessToken;
       localStorage.setItem('accessToken', token);

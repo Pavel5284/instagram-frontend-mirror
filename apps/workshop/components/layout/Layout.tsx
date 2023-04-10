@@ -21,5 +21,4 @@ export const Layout = ({ children, withSideMenu, isCreateProfilePage }: LayoutPr
       <Stack sx={pageStyle}>{children}</Stack>
     </Stack>
   </Stack>
-
 );

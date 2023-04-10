@@ -1,7 +1,7 @@
-import { instance } from "services/instance";
+import { instance } from 'services/instance';
 
 export const logOutAPI = {
-    logOut() {
-        return instance.post('auth/logout', {}, { withCredentials: true });
-    },
+  logOut() {
+    return instance.post('auth/logout', {}, { withCredentials: true });
+  },
 };
