@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { AxiosError } from 'axios/index';
 import { Dispatch, SetStateAction } from 'react';
+import { AxiosError } from 'axios';
 import { registrationApi } from './api';
 
 type AuthErrorsMessage = {

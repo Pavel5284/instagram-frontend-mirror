@@ -11,10 +11,10 @@ import { Button } from 'packages.inputs.button';
 import { InputWithHookForm } from 'packages.rhf.inputs.input';
 import { Modal } from 'packages.components.modal';
 import { Layout } from 'components/layout';
+import { useRegisterNewUserMutation } from 'services/auth/registration';
+import { Auth } from 'common/path';
 import googleImg from 'common/assets/images/registration/registration-icons/google-svgrepo-com.svg';
 import facebookImg from 'common/assets/images/registration/registration-icons/facebook-svgrepo-com.svg';
-import { Auth } from 'common/path';
-import { useRegisterNewUserMutation } from 'services/auth/registration';
 
 export const signupSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),

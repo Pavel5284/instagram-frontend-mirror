@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { InformationLayout } from 'packages.components.information-layout';
 import { Layout } from 'components/layout';
-import congratulations from 'common/assets/images/registration-confirmation/bro.svg';
 import { Auth } from 'common/path';
+import congratulations from 'common/assets/images/registration-confirmation/bro.svg';
 
 export default function RegistrationConfirmation() {
   const { push } = useRouter();
