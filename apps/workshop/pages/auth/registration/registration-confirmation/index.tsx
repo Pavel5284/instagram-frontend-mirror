@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import { useConfirmNewUserQuery } from 'services/auth/registration/hooks';
+import { Auth } from 'common/path';
 import RegistrationConfirmation from './Confirmation';
-import { useConfirmNewUserQuery } from '../../../../services/auth/registration/hooks';
-import { Auth } from '../../../../common/path';
 
 export default function Confirmation() {
   const { query, push, isReady } = useRouter();

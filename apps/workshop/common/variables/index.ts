@@ -1,1 +1,1 @@
-export { RecoveryPasswordStorageKey, RegisterNewUserStorageKey } from './storageKeys';
+export { RecoveryPasswordStorageKey } from './storageKeys';
