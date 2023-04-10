@@ -43,6 +43,11 @@ const NewPassword = () => {
 
   const { mutate: setNewPassword } = useSetNewPasswordPasswordMutation(handleFailedRequest);
 
+  const onClearError = () => {
+    setErrors('');
+    clearErrors();
+  };
+
   const {
     handleSubmit,
     control,
@@ -79,10 +84,7 @@ const NewPassword = () => {
 
           <Stack sx={inputContainerStyle}>
             <InputWithHookForm
-              clearErrors={() => {
-                setErrors('');
-                clearErrors();
-              }}
+              clearErrors={onClearError}
               control={control}
               name="newPassword"
               label="New password"
@@ -97,10 +99,7 @@ const NewPassword = () => {
 
           <Stack sx={inputContainerStyle}>
             <InputWithHookForm
-              clearErrors={() => {
-                setErrors('');
-                clearErrors();
-              }}
+              clearErrors={onClearError}
               control={control}
               name="passwordConfirmation"
               label="Password confirmation"

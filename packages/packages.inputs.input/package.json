@@ -12,7 +12,9 @@
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.11.15",
     "settings.config-muidts": "*",
-    "theme.scheme": "*"
+    "theme.scheme": "*",
+    "packages.icons.eye-on-outline": "*",
+    "packages.icons.eye-off-outline": "*"
   },
   "devDependencies": {
     "@types/node": "18.15.11",

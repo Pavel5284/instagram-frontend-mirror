@@ -1,0 +1,1 @@
+export { MaximizeIconOutline } from './MaximizeIconOutline';

@@ -33,4 +33,13 @@ export const styleForInput = (theme: Palette, error: string | boolean) => ({
   '& label.Mui-error': {
     color: theme.danger['100'],
   },
+  '& input': {
+    color: theme.light['900'],
+    fontFamily: 'Inter',
+    '&:-webkit-autofill': {
+      color: theme.light['900'],
+      boxShadow: `0 0 0 30px ${theme.dark['500']} inset`,
+      WebkitTextFillColor: theme.light['900'],
+    },
+  },
 });

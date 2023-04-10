@@ -3,11 +3,12 @@ import Router from 'next/router';
 import { Auth } from 'common/path';
 import { logOutAPI } from './api';
 
-export const useLogOutMutation = () => useMutation({
+export const useLogOutMutation = () =>
+  useMutation({
     mutationFn: () => logOutAPI.logOut(),
     onSuccess: () => {
       localStorage.removeItem('jwt');
-      Router.push(Auth.Login);
+      Router.push(Auth.SignIn);
     },
     onError: (err) => {
       console.log(err);
