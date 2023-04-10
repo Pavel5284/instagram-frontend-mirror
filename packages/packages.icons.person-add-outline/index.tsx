@@ -1,0 +1,1 @@
+export { PersoneAddIconOutline } from './PersoneAddIconOutline';

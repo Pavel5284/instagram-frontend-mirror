@@ -1,0 +1,1 @@
+export { CopyIconOutline } from './CopyIconOutline';
