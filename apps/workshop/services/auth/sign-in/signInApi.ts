@@ -1,4 +1,4 @@
-import { instance } from '../../../../../../instagram-frontend/services/instance/instance';
+import { instance } from 'services/instance';
 
 export type LoginFieldType = {
   email: string;
