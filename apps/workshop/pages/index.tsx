@@ -22,22 +22,32 @@ import { ImageOutlineIcon } from 'packages.icons.image-outline';
 import { PlusCircleOutlineIcon } from 'packages.icons.plus-circle-outline';
 import { PlusCircleIcon } from 'packages.icons.plus-circle';
 import { SearchIcon } from 'packages.icons.search';
-
 import { EyeOffIcon } from 'packages.icons.eye-off';
 import { EyeOnIcon } from 'packages.icons.eye-on';
-import { MessageCircleIcon } from 'packages.icons.message-circle';
+import { EyeOnIconOutline } from 'packages.icons.eye-on-outline';
+import { EyeOffIconOutline } from 'packages.icons.eye-off-outline';
+import { MessageCircleIconOutline } from 'packages.icons.message-circle-outline';
+import { PersoneRemoveIconOutline } from 'packages.icons.person-remove-outline';
+import { PersoneAddIconOutline } from 'packages.icons.person-add-outline';
+import { CopyIconOutline } from 'packages.icons.copy-outline';
+import { PinIconOutline } from 'packages.icons.pin-outline';
+import { EmailIconOutline } from 'packages.icons.email-outline';
+import { TrashIconOutline } from 'packages.icons.trash-outline';
+import { MaximizeIconOutline } from 'packages.icons.maximize-outline';
 import { MoreHorizontalIcon } from 'packages.icons.more-horizontal';
-import { PersoneAddIcon } from 'packages.icons.person-add';
+import { MessageCircleIcon } from 'packages.icons.message-circle';
 import { PersoneRemoveIcon } from 'packages.icons.person-remove';
-import { SendIcon } from 'packages.icons.send';
-
-import { CopyIcon } from 'packages.icons.copy';
-import { PinIcon } from 'packages.icons.pin';
-import { HeartIcon } from 'packages.icons.heart';
 import { EmailIcon } from 'packages.icons.email';
+import { EditIconOutline } from 'packages.icons.edit-outline';
+import { HeartIconOutline } from 'packages.icons.heart-outline';
+import { PersoneAddIcon } from 'packages.icons.person-add';
+import { CopyIcon } from 'packages.icons.copy';
+import { HeartIcon } from 'packages.icons.heart';
+import { PinIcon } from 'packages.icons.pin';
 import { TrashIcon } from 'packages.icons.trash';
 import { MaximizeIcon } from 'packages.icons.maximize';
 import { EditIcon } from 'packages.icons.edit';
+import { SendIconOutline } from 'packages.icons.send-outline';
 
 export default function Home() {
   return (
@@ -73,9 +83,22 @@ export default function Home() {
       <PlusCircleOutlineIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
       <SearchIcon sx={{ color: 'purple', width: '30px', height: '30px' }} />
 
+      <EyeOnIconOutline sx={{ fill: 'pink' }} />
+      <EyeOffIconOutline sx={{ fill: 'pink' }} />
+      <SendIconOutline sx={{ fill: 'pink' }} />
+      <MessageCircleIconOutline sx={{ fill: 'pink' }} />
+      <PersoneRemoveIconOutline sx={{ fill: 'pink' }} />
+      <PersoneAddIconOutline sx={{ fill: 'pink' }} />
+      <CopyIconOutline sx={{ fill: 'pink' }} />
+      <PinIconOutline sx={{ fill: 'pink' }} />
+      <HeartIconOutline sx={{ fill: 'pink' }} />
+      <EmailIconOutline sx={{ fill: 'pink' }} />
+      <TrashIconOutline sx={{ fill: 'pink' }} />
+      <MaximizeIconOutline sx={{ fill: 'pink' }} />
+      <EditIconOutline sx={{ fill: 'pink' }} />
+
       <EyeOffIcon sx={{ fill: 'pink' }} />
       <EyeOnIcon sx={{ fill: 'pink' }} />
-      <SendIcon sx={{ fill: 'pink' }} />
       <MoreHorizontalIcon sx={{ fill: 'pink' }} />
       <MessageCircleIcon sx={{ fill: 'pink' }} />
       <PersoneRemoveIcon sx={{ fill: 'pink' }} />

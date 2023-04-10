@@ -2,8 +2,8 @@ import React, { FC, useState } from 'react';
 import { IconButton, InputAdornment, TextField, TextFieldProps } from '@mui/material';
 import { useTheme } from '@emotion/react';
 import { Scheme } from 'theme.scheme';
-import { EyeOnIcon } from 'packages.icons.eye-on';
-import { EyeOffIcon } from 'packages.icons.eye-off';
+import { EyeOnIconOutline } from 'packages.icons.eye-on-outline';
+import { EyeOffIconOutline } from 'packages.icons.eye-off-outline';
 import { styleForInput } from './style';
 
 export type InputType = {
@@ -47,9 +47,9 @@ export const Input: FC<InputType> = ({
             {type === 'password' && (
               <IconButton onClick={() => setShow(!show)}>
                 {show ? (
-                  <EyeOnIcon sx={{ fill: palette.light['900'] }} />
+                  <EyeOnIconOutline sx={{ fill: palette.light['900'] }} />
                 ) : (
-                  <EyeOffIcon sx={{ fill: palette.light['900'] }} />
+                  <EyeOffIconOutline sx={{ fill: palette.light['900'] }} />
                 )}
               </IconButton>
             )}

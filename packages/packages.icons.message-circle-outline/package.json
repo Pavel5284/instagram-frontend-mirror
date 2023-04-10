@@ -1,5 +1,5 @@
 {
-  "name": "packages.icons.send",
+  "name": "packages.icons.message-circle-outline",
   "version": "0.0.0",
   "main": "./index.tsx",
   "types": "./index.tsx",

@@ -1,0 +1,1 @@
+export { TrashIconOutline } from './TrashIconOutline';
