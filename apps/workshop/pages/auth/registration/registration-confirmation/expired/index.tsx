@@ -8,8 +8,8 @@ import { InformationLayout } from 'packages.components.information-layout';
 import { Modal } from 'packages.components.modal';
 import { Button } from 'packages.inputs.button';
 import { InputWithHookForm } from 'packages.rhf.inputs.input';
-import timeManagement from '../../../../../common/assets/images/time-management/time-management.svg';
-import { useResendEmailMutation } from '../../../../../services/auth/registration/hooks';
+import timeManagement from 'common/assets/images/time-management/time-management.svg';
+import { useResendEmailMutation } from 'services/auth/registration/hooks';
 
 export const emailSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),

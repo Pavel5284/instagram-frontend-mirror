@@ -10,11 +10,11 @@ import { AuthForm } from 'packages.components.auth-form';
 import { Button } from 'packages.inputs.button';
 import { InputWithHookForm } from 'packages.rhf.inputs.input';
 import { Modal } from 'packages.components.modal';
-import { Layout } from '../../../components/layout';
-import googleImg from '../../../common/assets/images/registration/registration-icons/google-svgrepo-com.svg';
-import facebookImg from '../../../common/assets/images/registration/registration-icons/facebook-svgrepo-com.svg';
-import { Auth } from '../../../common/path';
-import { useRegisterNewUserMutation } from '../../../services/auth/registration';
+import { Layout } from 'components/layout';
+import googleImg from 'common/assets/images/registration/registration-icons/google-svgrepo-com.svg';
+import facebookImg from 'common/assets/images/registration/registration-icons/facebook-svgrepo-com.svg';
+import { Auth } from 'common/path';
+import { useRegisterNewUserMutation } from 'services/auth/registration';
 
 export const signupSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),
@@ -78,6 +78,7 @@ export default function RegistrationForm() {
           >
             Sign Up
           </Typography>
+
           <div style={{ width: '100%', display: 'flex', justifyContent: 'space-evenly' }}>
             <a href="https://www.google.com/" target="_blank" rel="noreferrer">
               <Image width={36} height={36} alt="google-register" src={googleImg} />
@@ -86,6 +87,7 @@ export default function RegistrationForm() {
               <Image width={36} height={36} alt="facebook-register" src={facebookImg} />
             </a>
           </div>
+
           <form
             style={{
               display: 'flex',
