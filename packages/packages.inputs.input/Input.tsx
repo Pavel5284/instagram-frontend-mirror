@@ -59,7 +59,7 @@ export const Input: FC<InputType> = ({
         ...InputProps,
       }}
       error={!!error}
-      helperText={helperText ? error : ''}
+      helperText={helperText || ''}
       {...rest}
     />
   );
