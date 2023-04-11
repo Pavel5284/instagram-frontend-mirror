@@ -1,0 +1,1 @@
+export { SendIconOutline } from './SendIconOutline';

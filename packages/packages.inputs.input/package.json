@@ -13,8 +13,8 @@
     "@mui/material": "^5.11.15",
     "settings.config-muidts": "*",
     "theme.scheme": "*",
-    "packages.icons.eye-on": "*",
-    "packages.icons.eye-off": "*"
+    "packages.icons.eye-on-outline": "*",
+    "packages.icons.eye-off-outline": "*"
   },
   "devDependencies": {
     "@types/node": "18.15.11",

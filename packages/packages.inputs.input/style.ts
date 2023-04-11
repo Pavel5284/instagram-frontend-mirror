@@ -39,7 +39,7 @@ export const styleForInput = (theme: Palette, error: string | boolean) => ({
     '&:-webkit-autofill': {
       color: theme.light['900'],
       boxShadow: `0 0 0 30px ${theme.dark['500']} inset`,
-      '-webkit-text-fill-color': theme.light['900'],
+      WebkitTextFillColor: theme.light['900'],
     },
   },
 });
