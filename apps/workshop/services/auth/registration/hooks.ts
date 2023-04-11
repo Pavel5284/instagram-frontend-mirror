@@ -1,6 +1,8 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { Dispatch, SetStateAction } from 'react';
 import { AxiosError } from 'axios';
+import { useRouter } from 'next/router';
+import { Auth } from 'common/path';
 import { registrationApi } from './api';
 
 type AuthErrorsMessage = {
@@ -36,12 +38,21 @@ export const useRegisterNewUserMutation = (
     },
   });
 
-export const useConfirmNewUserQuery = (code: string) =>
-  useQuery({
-    queryKey: ['confirmEmail'],
-    queryFn: () => registrationApi.confirmNewUserEmail(code),
-  });
+export const useConfirmNewUserQuery = () => {
+  const { push } = useRouter();
+  return useMutation({
+    mutationFn: registrationApi.confirmNewUserEmail,
 
+    onError: (error: AuthErrorResponse) => {
+      const messages = error.response?.data.errorsMessages;
+      if (messages) {
+        if (messages[0].field === 'code') {
+          push(Auth.RegistrationExpired);
+        }
+      }
+    },
+  });
+};
 export const useResendEmailMutation = (
   setConfirmModalOpen?: Dispatch<SetStateAction<boolean>>,
   setIsModalOpen?: Dispatch<SetStateAction<boolean>>,
