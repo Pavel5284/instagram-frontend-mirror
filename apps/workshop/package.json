@@ -28,6 +28,7 @@
     "packages.components.auth-form": "*",
     "packages.components.header": "*",
     "packages.components.modal": "*",
+    "packages.components.progress": "*",
     "packages.components.information-layout": "*",
     "packages.icons.log-out": "*",
     "packages.icons.home-outline": "*",

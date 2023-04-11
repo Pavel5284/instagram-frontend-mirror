@@ -1,7 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { Dispatch, SetStateAction } from 'react';
+import { noRefetch } from 'common/helpers';
 import { SignInApi } from './signInApi';
-import { noRefetch } from '../../../common/helpers';
 
 const handleSignInErrors = (error: any) => {
   const errors = error.response.status === 401;

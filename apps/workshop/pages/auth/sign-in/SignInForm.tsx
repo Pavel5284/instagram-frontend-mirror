@@ -7,11 +7,11 @@ import React, { useState } from 'react';
 import { AuthForm } from 'packages.components.auth-form';
 import { Button } from 'packages.inputs.button';
 import { InputWithHookForm } from 'packages.rhf.inputs.input';
-import googleImg from '../../../common/assets/images/registration/registration-icons/google-svgrepo-com.svg';
-import facebookImg from '../../../common/assets/images/registration/registration-icons/facebook-svgrepo-com.svg';
-import { Auth } from '../../../common/path';
-import { useLoginMutation } from '../../../services/auth/sign-in/hooks';
-import { Layout } from '../../../components/layout';
+import googleImg from 'common/assets/images/registration/registration-icons/google-svgrepo-com.svg';
+import { Auth } from 'common/path';
+import { useLoginMutation } from 'services/auth/sign-in/hooks';
+import { Layout } from 'components/layout';
+import facebookImg from 'common/assets/images/registration/registration-icons/facebook-svgrepo-com.svg';
 
 const schema = yup.object().shape({
   email: yup.string().email('Invalid email adress').required('Required'),
@@ -131,7 +131,7 @@ export default function SignInForm() {
             </Button>
             {/* <button type="submit"> Sign In </button> */}
           </form>
-          <Typography variant="regular_text_16">Don`&apos`t have an account?</Typography>
+          <Typography variant="regular_text_16">Don&apos;t have an account?</Typography>
           <Link
             sx={{ textDecoration: 'none', m: '20px 0' }}
             variant="h3"
