@@ -1,8 +1,8 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { Dispatch, SetStateAction } from 'react';
-import { noRefetch } from 'common/helpers';
 import { AxiosError } from 'axios';
 import { SignInApi } from './signInApi';
+import { noRefetch } from '../../../common/helpers';
 
 const handleSignInErrors = (error: any) => {
   const errors = error.response.status === 401;
@@ -15,7 +15,7 @@ const handleSignInErrors = (error: any) => {
 
 export const useLoginMutation = (setError?: Dispatch<SetStateAction<string>> | null) => {
   const client = useQueryClient();
-  return useMutation({
+  const mutation = useMutation({
     mutationFn: SignInApi.login,
     onError: (error: AxiosError) => {
       console.log(error);
@@ -29,6 +29,8 @@ export const useLoginMutation = (setError?: Dispatch<SetStateAction<string>> | n
       client.invalidateQueries(['me']);
     },
   });
+
+  return mutation;
 };
 
 export const useMeQuery = () =>

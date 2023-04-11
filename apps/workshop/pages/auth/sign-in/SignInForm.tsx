@@ -3,7 +3,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { Link, Stack, Typography } from '@mui/material';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React from 'react';
 import { AuthForm } from 'packages.components.auth-form';
 import { Button } from 'packages.inputs.button';
 import { InputWithHookForm } from 'packages.rhf.inputs.input';
@@ -12,6 +12,7 @@ import { Auth } from 'common/path';
 import { useLoginMutation } from 'services/auth/sign-in/hooks';
 import { Layout } from 'components/layout';
 import facebookImg from 'common/assets/images/registration/registration-icons/facebook-svgrepo-com.svg';
+import { useRouter } from 'next/router';
 
 const schema = yup.object().shape({
   email: yup.string().email('Invalid email adress').required('Required'),
@@ -33,9 +34,11 @@ export default function SignInForm() {
     reValidateMode: 'onSubmit',
     resolver: yupResolver(schema),
   });
+  const { push } = useRouter();
   const onSubmit = (data: FormData) => {
     console.log(data);
     login(data);
+    push('/auth/userpage');
   };
 
   return (
