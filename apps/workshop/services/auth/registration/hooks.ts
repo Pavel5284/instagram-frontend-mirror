@@ -17,7 +17,7 @@ const handleRegistrationErrors = (error: AuthErrorResponse) => {
     return errorsMessages[0].message;
   }
 
-  return error.message;
+  return 'something went wrong, please try again';
 };
 
 export const useRegisterNewUserMutation = (
@@ -31,7 +31,7 @@ export const useRegisterNewUserMutation = (
       if (setError) setError(handleRegistrationErrors(error));
     },
 
-    onSuccess: (_, data) => {
+    onSuccess: () => {
       if (setIsModalOpen) setIsModalOpen(true);
     },
   });
