@@ -11,12 +11,16 @@ import { Button } from 'packages.inputs.button';
 import { InputWithHookForm } from 'packages.rhf.inputs.input';
 import { Modal } from 'packages.components.modal';
 import { Layout } from 'components/layout';
+import { useRegisterNewUserMutation } from 'services/auth/registration';
+import { Auth } from 'common/path';
 import googleImg from 'common/assets/images/registration/registration-icons/google-svgrepo-com.svg';
 import facebookImg from 'common/assets/images/registration/registration-icons/facebook-svgrepo-com.svg';
-import { Auth } from 'common/path';
-import { useRegisterNewUserMutation } from 'services/auth/registration';
 
 export const signupSchema = Yup.object().shape({
+  username: Yup.string()
+    .min(4, 'must be at least 4 characters')
+    .max(15, 'must be shorter than or equal to 15 characters')
+    .required('Required'),
   email: Yup.string().email('Invalid email').required('Required'),
   password: Yup.string()
     .min(6, 'must be at least 6 characters')
@@ -44,11 +48,11 @@ export default function RegistrationForm() {
   } = useForm<FormData>({
     resolver: yupResolver(signupSchema),
     reValidateMode: 'onSubmit',
-    defaultValues: { email: '', password: '', confirmPassword: '' },
+    defaultValues: { username: '', email: '', password: '', confirmPassword: '' },
   });
 
   const onSubmit = (values: FormData) => {
-    registerNewUser({ email: values.email, password: values.password });
+    registerNewUser({ email: values.email, password: values.password, userName: values.username });
     setCurrentEmail(values.email);
   };
 
@@ -79,14 +83,14 @@ export default function RegistrationForm() {
             Sign Up
           </Typography>
 
-          <div style={{ width: '100%', display: 'flex', justifyContent: 'space-evenly' }}>
-            <a href="https://www.google.com/" target="_blank" rel="noreferrer">
+          <Stack direction="row" justifyContent="space-evenly" sx={{ width: '100%' }}>
+            <Link href="https://www.google.com/" target="_blank" rel="noreferrer">
               <Image width={36} height={36} alt="google-register" src={googleImg} />
-            </a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+            </Link>
+            <Link href="https://www.facebook.com/" target="_blank" rel="noreferrer">
               <Image width={36} height={36} alt="facebook-register" src={facebookImg} />
-            </a>
-          </div>
+            </Link>
+          </Stack>
 
           <form
             style={{
@@ -99,6 +103,15 @@ export default function RegistrationForm() {
               alignItems: 'center',
             }}
           >
+            <InputWithHookForm
+              clearErrors={handleClearErrors}
+              control={control}
+              name="username"
+              label="Username"
+              isError={!!registerErrors.username?.message}
+              helperText={registerErrors.username?.message}
+            />
+
             <InputWithHookForm
               clearErrors={handleClearErrors}
               control={control}

@@ -1,8 +1,9 @@
 import { instance } from 'services/instance';
 
-type RegisterNewUserType = {
+export type RegisterNewUserType = {
   email: string;
   password: string;
+  userName: string;
 };
 
 export const registrationApi = {
