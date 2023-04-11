@@ -8,8 +8,7 @@ export const instanceWithCredentials = axios.create({
   baseURL: 'https://it-team2-backend-mirror.vercel.app/',
   withCredentials: true,
 });
-/*
-instance.interceptors.response.use(
+/* instance.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response.status === 401) {
@@ -17,10 +16,9 @@ instance.interceptors.response.use(
     }
     return error;
   },
-);
+); */
 instance.interceptors.request.use((config) => {
   config.headers.Authorization = `Bearer ${localStorage.getItem('accessToken')}`;
   // console.log(config.headers.Authorization);
   return config;
 });
-*/

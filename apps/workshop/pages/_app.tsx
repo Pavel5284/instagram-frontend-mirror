@@ -4,6 +4,7 @@ import type { AppProps } from 'next/app';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { getScheme } from 'theme.scheme';
 import { Layout } from 'components/layout';
+import { AuthRedirect } from '../components/auth-redirect';
 
 const queryClient = new QueryClient();
 
@@ -14,7 +15,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
         <Layout isCreateProfilePage>
-          <Component {...pageProps} />
+          <AuthRedirect>
+            <Component {...pageProps} />
+          </AuthRedirect>
         </Layout>
       </ThemeProvider>
     </QueryClientProvider>
